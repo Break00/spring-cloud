@@ -1,0 +1,23 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8800/eureka/
+      # 启用服务消费者从注册中心拉取服务列表的功能
+    fetch-registry: true
+    # 设置服务消费者从注册中心拉取服务列表的间隔
+    registry-fetch-interval-seconds: 30
+
+server:
+  port: 8600
+
+spring:
+  application:
+    name: consumer
+
+feign:
+  hystrix:
+    enabled: true
+
+
+
+

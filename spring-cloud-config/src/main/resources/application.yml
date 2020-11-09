@@ -1,0 +1,22 @@
+#端口号
+server:
+    port: 8010
+
+#在注册中心中进行注册
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8800/eureka/
+
+spring:
+    application:
+        name: config  # 应用名称
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/Break00/spring-cloud-config.git #配置文件所在仓库
+                    username:  # 公共仓库可省略
+                    password:
+                    search-paths: config  #配置文件所在根目录
+
